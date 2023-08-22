@@ -18,7 +18,7 @@ import { LogoComponent } from './components/logo/logo.component';
   exports: [
     HeaderComponent,
     CustomInputComponent,
-    LogoComponent
+    LogoComponent,
   ],
   imports: [
     CommonModule,

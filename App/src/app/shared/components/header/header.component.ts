@@ -16,7 +16,9 @@ export class HeaderComponent  implements OnInit {
   @Input() centerTitle: boolean;
 
   darkMode: BehaviorSubject<boolean>;
-  constructor(private themeSvc: ThemeService) { }
+  constructor(private themeSvc: ThemeService) { 
+    
+  }
 
   ngOnInit() {
     this.darkMode = this.themeSvc.darkMode;
