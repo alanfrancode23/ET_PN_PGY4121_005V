@@ -70,4 +70,8 @@ export class SignUpPage implements OnInit {
     }
   }
 
+  limpiar(){
+    this.form.reset();
+  }
+
 }
