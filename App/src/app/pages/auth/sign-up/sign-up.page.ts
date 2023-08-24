@@ -44,8 +44,8 @@ export class SignUpPage implements OnInit {
         await this.firebaseSvc.updateUser({ displayName: this.form.value.name})
         let user: User = {
           uid: res.user.uid,
-          name: this.form.value.name,
-          email: this.form.value.email
+          name: res.user.displayName,
+          email: res.user.email
         }
 
         this.utilsSvc.setElementInLocalStorage('user', user);
@@ -58,6 +58,7 @@ export class SignUpPage implements OnInit {
           color: 'primary',
           icon: 'person-outline'
         });
+        this.form.reset();
       }, error => {
         this.utilsSvc.dismissLoading();
         this.utilsSvc.presentToast({

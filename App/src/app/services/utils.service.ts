@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { LoadingController, LoadingOptions, ToastController, ToastOptions } from '@ionic/angular';
+import { AlertController, AlertOptions, LoadingController, LoadingOptions, ToastController, ToastOptions } from '@ionic/angular';
 import { Router } from '@angular/router';
 
 @Injectable({
@@ -10,7 +10,8 @@ export class UtilsService {
   constructor(
     private loadingController: LoadingController,
     private router: Router,
-    private toastController: ToastController
+    private toastController: ToastController,
+    private alertController: AlertController
   ) { }
 
 
@@ -42,5 +43,11 @@ export class UtilsService {
   // Router
   routerLink(url: string) {
     return this.router.navigateByUrl(url);
+  }
+
+  // Alert
+  async presentAlert(opts: AlertOptions) {
+    const alert = await this.alertController.create(opts);
+    await alert.present();
   }
 }
