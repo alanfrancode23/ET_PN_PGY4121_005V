@@ -19,7 +19,7 @@ export class UtilsService {
 
   // Loading
 
-  async presentLoading(opts: LoadingOptions) {
+  async presentLoading(opts?: LoadingOptions) {
     const loading = await this.loadingController.create(opts);
     await loading.present();
   }
