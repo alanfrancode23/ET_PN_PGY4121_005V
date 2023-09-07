@@ -37,6 +37,10 @@ export class UtilsService {
     return JSON.parse(localStorage.getItem(key));
   }
 
+  removeElementInLocalStorage(key: string) {
+    localStorage.removeItem(key);
+  }
+
   async presentToast(opts: ToastOptions) {
     const toast = await this.toastController.create(opts);
     toast.present();

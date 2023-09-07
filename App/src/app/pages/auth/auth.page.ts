@@ -26,7 +26,7 @@ export class AuthPage implements OnInit {
 
   submit() {
     if (this.form.valid) {
-      this.utilsSvc.presentLoading({message: 'Autenticando...', mode: 'ios'});
+      this.utilsSvc.presentLoading({message: 'Autenticando...', mode: 'ios' });
       this.firebaseSvc.login(this.form.value as User).then(async res => {
         console.log(res);
         let user: User = {
@@ -50,7 +50,7 @@ export class AuthPage implements OnInit {
       }, error => {
         this.utilsSvc.dismissLoading();
         this.utilsSvc.presentToast({
-          message: error,
+          message: error.message,
           duration: 5000,
           color: 'warning',
           icon: 'alert-circle-outline'

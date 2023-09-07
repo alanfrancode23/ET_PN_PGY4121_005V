@@ -37,7 +37,7 @@ export class FirebaseService {
   async signOut() {
     await this.auth.signOut();
     this.utilsSvc.routerLink('/auth');
-    localStorage.removeItem('user');
+    this.utilsSvc.removeElementInLocalStorage('user');
   }
 
   // Firebase (base de datos)
