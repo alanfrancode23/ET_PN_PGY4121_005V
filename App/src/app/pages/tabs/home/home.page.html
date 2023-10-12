@@ -34,11 +34,11 @@
                   <p>{{task.description | slice:0:85}}...</p>
                   <div class="ion-text-center">
                     <ion-button (click)="addOrUpdateTask(task)"  class="tarea-btn" mode="ios" size="small">
-                      Ver Tarea
+                      Ver Comentario
                       <ion-icon slot="end" name="eye-outline"></ion-icon>
                     </ion-button>
                     <ion-button (click)="confirmDeleteTask(task)" class="tarea-btn" mode="ios" color="danger" size="small">
-                      Eliminar Tarea
+                      Eliminar Comentario
                       <ion-icon slot="end" name="trash-outline"></ion-icon>
                     </ion-button>
                   </div>
@@ -65,8 +65,8 @@
 
       <ion-row *ngIf="!loading && !tasks.length">
         <ion-col class="empty"  size="12">
-          <ion-icon name="create-outline"></ion-icon>
-          <h4>No tienes tareas</h4>
+          <ion-icon name="create-outline"></ion-icon>2
+          <h4>No tienes publicaciones ni comentarios</h4>
         </ion-col>
       </ion-row>
     </ion-grid>

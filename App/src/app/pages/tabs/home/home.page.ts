@@ -15,6 +15,7 @@ export class HomePage implements OnInit {
   tasks: Task[] = [];
   user = {} as User;
   loading: boolean = false;
+  
 
   constructor(
     private firebaseSvc: FirebaseService,
@@ -72,7 +73,7 @@ export class HomePage implements OnInit {
     this.firebaseSvc.deleteDocument(path).then(res => {
 
     this.utilsSvc.presentToast({
-      message: 'Tarea eliminada exitosamente',
+      message: 'Comentario eliminado exitosamente',
       color: 'success',
       icon: 'checkmark-circle-outline',
       duration: 1500
@@ -96,8 +97,8 @@ export class HomePage implements OnInit {
 
   confirmDeleteTask(task: Task){ {
     this.utilsSvc.presentAlert({
-      header: 'Eliminar tarea',
-      message: '¿Quieres eliminar esta tarea?',
+      header: 'Eliminar comentario',
+      message: '¿Quieres eliminar este comentario?',
       mode: 'ios',
       buttons: [
         {
@@ -112,4 +113,6 @@ export class HomePage implements OnInit {
       });
     }
   }
+
+  
 }
