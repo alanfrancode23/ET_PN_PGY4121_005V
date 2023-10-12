@@ -1,11 +1,11 @@
 export const environment = {
   production: true,
-  firebaseConfig: {
-    apiKey: "AIzaSyCL-mE70yIECBf6aXqXUbFaRf5SBLHaDRA",
-    authDomain: "todonow-app.firebaseapp.com",
-    projectId: "todonow-app",
-    storageBucket: "todonow-app.appspot.com",
-    messagingSenderId: "298612884717",
-    appId: "1:298612884717:web:b47499840ef1027bd378e4"
+  firebaseConfig : {
+    apiKey: "AIzaSyDpRd4YlIk8LUBRiw7qlwYlI4NRX4OdWo0",
+    authDomain: "app-forox.firebaseapp.com",
+    projectId: "app-forox",
+    storageBucket: "app-forox.appspot.com",
+    messagingSenderId: "765292864956",
+    appId: "1:765292864956:web:08148b92fc08c1f3d1b7b9"
   }
 };
