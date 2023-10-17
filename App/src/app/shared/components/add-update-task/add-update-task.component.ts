@@ -56,7 +56,7 @@ export class AddUpdateTaskComponent  implements OnInit {
     this.firebasesSvc.addToSubcollection(path, 'tasks', this.form.value).then(res => {
     this.utilsSvc.dismssModal({success: true}); 
     this.utilsSvc.presentToast({
-      message: 'Tarea creada exitosamente',
+      message: 'Comentario creado exitosamente',
       color: 'success',
       icon: 'checkmark-circle-outline',
       duration: 1500
@@ -86,7 +86,7 @@ export class AddUpdateTaskComponent  implements OnInit {
     this.firebasesSvc.updateDocument(path, this.form.value).then(res => {
     this.utilsSvc.dismssModal({success: true}); 
     this.utilsSvc.presentToast({
-      message: 'Tarea actualizada exitosamente',
+      message: 'Comentario actualizado exitosamente',
       color: 'success',
       icon: 'checkmark-circle-outline',
       duration: 1500
@@ -123,12 +123,12 @@ export class AddUpdateTaskComponent  implements OnInit {
 
   createItem(){
     this.utilsSvc.presentAlert({
-      header: 'Nueva Actividad',
+      header: 'Nuevo Comentario',
       backdropDismiss: false,
       inputs: [{
         name: 'name',
         type: 'textarea',
-        placeholder: 'Hacer algo'
+        placeholder: 'Comentar algo'
       }],
       buttons: [{
           text:'Cancelar',
