@@ -32,13 +32,13 @@
       
       <ion-label class="ion-text-wrap">
         {{item.name}} 
-        <p>creado por: {{user.name}}</p>
       </ion-label>
       <ion-buttons slot="end">
         <ion-button (click)="removeItem(i)">
           <ion-icon slot="end" name="trash-outline"></ion-icon>
         </ion-button>
       </ion-buttons>
+      <p>creado por: {{user.name}}</p>
       
     </ion-item>
 
