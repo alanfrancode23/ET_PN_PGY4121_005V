@@ -76,9 +76,8 @@ export class UtilsService {
   }
 
   getPercentage(task: Task){
-    let completeItems = task.items.filter(item => item.completed).length;
     let totalItems = task.items.length;
-    let percentage = (100/totalItems) * completeItems;
+    let percentage = (totalItems) ;
 
     return parseInt(percentage.toString());
   }

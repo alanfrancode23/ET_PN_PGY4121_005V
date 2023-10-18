@@ -56,4 +56,11 @@ export class FirebaseService {
   deleteDocument(path: string){
     return this.db.doc(path).delete();
   }
+
+  getTasksFromAllUsers() {
+    // Usamos collectionGroup para obtener datos de una subcolección específica en todos los documentos
+    return this.db.collectionGroup('tasks').valueChanges({idField: 'id'});
+  }
+
+  
 }

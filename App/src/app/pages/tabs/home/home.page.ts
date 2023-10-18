@@ -50,20 +50,20 @@ export class HomePage implements OnInit {
     }
   }
 
+  
   getTasks(){
-    let user: User = this.utilsSvc.getElementInLocalStorage('user')
-    let path = `users/${user.uid}`;
     this.loading = true;
 
-    let sub = this.firebaseSvc.getSubcollection(path, 'tasks').subscribe({
+    let sub = this.firebaseSvc.getTasksFromAllUsers().subscribe({
       next: (res: Task[]) => {
         console.log(res);
-        this.tasks = res
-        sub.unsubscribe()
+        this.tasks = res;
+        sub.unsubscribe();
         this.loading = false;
       }
-    })
-  }
+    });
+}
+
 
   deleteTask(task: Task){
     let path = `users/${this.user.uid}/tasks/${task.id}`;

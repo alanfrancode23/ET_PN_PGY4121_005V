@@ -143,5 +143,8 @@ export class AddUpdateTaskComponent  implements OnInit {
       }]
     })
   }
+  getUser() {
+    return this.user = this.utilsSvc.getElementInLocalStorage('user');
+  }
 
 }
