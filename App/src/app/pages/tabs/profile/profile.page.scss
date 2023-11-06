@@ -5,3 +5,10 @@
 ion-button {
     margin-top: 50px;
 }
+
+ion-img {
+    width: 130px; /* Ancho deseado */
+    height: 130PX; /* Altura ajustada automáticamente para mantener la proporción */
+    margin-left: 608px; /* Mover la imagen hacia la derecha */
+  }
+  

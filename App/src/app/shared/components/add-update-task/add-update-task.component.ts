@@ -147,4 +147,10 @@ export class AddUpdateTaskComponent  implements OnInit {
     return this.user = this.utilsSvc.getElementInLocalStorage('user');
   }
 
+  async takeImage() {
+    const dataUrl = (await this.utilsSvc.takePicture('Imagen de la tarea'))
+      .dataUrl;
+    this.form.controls.description.setValue(dataUrl);
+  }
+
 }

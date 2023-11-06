@@ -1,5 +1,6 @@
 <ion-content>
-  <app-header title="Inicio"></app-header>
+  <app-header title="Inicio">
+  </app-header>
 
   <div class="content">
 
@@ -18,15 +19,14 @@
                 <ion-col class="ion-text-center" size-lg="5" size-md="5" size-sm="4" size="12">
                   <circle-progress
                     [percent]="getPercentage(task)"
-                    [radius]="65"
-                    [outerStrokeWidth]="6"
-                    [innerStrokeWidth]="4"
-                    [outerStrokeColor]="'#78C000'"
-                    [innerStrokeColor]="'#C7E596'"
-                    [animation]="true"
-                    [titleColor]="'var(--ion-color-dark)'"
-                    [animationDuration]="300"
-                    [subtitle]="'Progreso'">
+                    [percent]="getPercentage(task)"
+                    [radius]=60
+                    [outerStrokeWidth]= 10
+                    [innerStrokeWidth]=  5
+                    [showUnits] = false
+                    [showBackground] = false
+                    [startFromZero] = false
+                    [subtitle]="'Total comentarios'">
                   </circle-progress>
                 </ion-col>
                 <ion-col size-lg="7" size-md="7" size-sm="8" size="12">

@@ -7,16 +7,16 @@
   <div *ngIf="form.controls.title.errors?.['minlength']">Este campo requiere al menos 4 caracteres</div>
 </div>
 
-<app-custom-input [control]="form.controls.description" type="textarea" label="Descripción"></app-custom-input>
-<div class="validators" *ngIf="form.controls.description.errors && form.controls.description.dirty">
-  <div *ngIf="form.controls.description.errors?.['required']">Este campo es requerido</div>
-  <div *ngIf="form.controls.description.errors?.['minlength']">Este campo requiere al menos 4 caracteres</div>
-</div>
+<ion-button (click)="takeImage()" mode="ios" size="small" shape="round">
+  Tomar/Seleccionar
+</ion-button>
+
+
 
 <ion-item class="item-header" lines="none">
   <ion-label>Comentarios</ion-label>
   <span slot="end" *ngIf="form.value.items.length">
-    Progreso: {{getPercentage()}}%
+    Total Comentarios: {{getPercentage()}}
   </span>
   <ion-button (click)="createItem()" slot="end" mode="ios">
     <ion-icon name="add-circle-outline"></ion-icon>
