@@ -7,6 +7,11 @@
   <div *ngIf="form.controls.title.errors?.['minlength']">Este campo requiere al menos 4 caracteres</div>
 </div>
 
+
+<ion-avatar *ngIf= "form.value.description">
+  <img [src]="form.value.description" />
+</ion-avatar>
+
 <ion-button (click)="takeImage()" mode="ios" size="small" shape="round">
   Tomar/Seleccionar
 </ion-button>
