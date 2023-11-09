@@ -3,7 +3,14 @@
 
   <div class="content ion-text-center">
 
-    <ion-img src="assets/img/LUFFY.png"></ion-img>
+    <ion-avatar *ngIf= "form.value.avatar">
+      <img [src]="form.value.avatar" />
+    </ion-avatar>
+
+    <ion-button (click)="takeImage()" mode="ios" size="small" shape="round">
+      Escoger Avatar
+    </ion-button>
+
     <h2>{{user.name}}</h2>
     <div>{{user.email}}</div>
 

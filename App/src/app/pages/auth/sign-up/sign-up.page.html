@@ -29,6 +29,7 @@
           <div *ngIf="form.controls.confirmPassword.errors?.['noMatch']">Las contraseñas no coinciden</div>
         </div>
 
+
         <ion-button class="ion-margin-vertical" [disabled]="form.invalid" type="submit" shape="round">
           Registrarme
           <ion-icon slot="end" name="person-add-outline"></ion-icon>
@@ -39,8 +40,7 @@
             Limpiar
             <ion-icon slot="end" name="trash-outline"></ion-icon>
           </ion-button>
-        </div>
-        
+        </div>     
 
       </form>
     </div>

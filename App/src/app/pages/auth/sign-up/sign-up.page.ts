@@ -4,6 +4,7 @@ import { User } from 'src/app/models/user.models';
 import { FirebaseService } from 'src/app/services/firebase.service';
 import { UtilsService } from 'src/app/services/utils.service';
 import { CustomValidators } from 'src/app/utils/custom-validators';
+import { ItemReorderEventDetail } from '@ionic/angular';
 
 @Component({
   selector: 'app-sign-up',
@@ -16,7 +17,7 @@ export class SignUpPage implements OnInit {
     name: new FormControl('', [Validators.required, Validators.minLength(4)]),
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', [Validators.required]),
-    confirmPassword: new FormControl(''),
+    confirmPassword: new FormControl('')
   });
 
   constructor(
