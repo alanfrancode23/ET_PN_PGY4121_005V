@@ -12,6 +12,8 @@
   <img [src]="form.value.description" />
 </ion-avatar>
 
+<ion-icon class="image-icon"  *ngIf= "!form.value.description" name="image-outline"></ion-icon>
+
 <ion-button (click)="takeImage()" mode="ios" size="small" shape="round">
   Tomar/Seleccionar
 </ion-button>
