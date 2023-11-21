@@ -20,7 +20,7 @@ export class AddUpdateTaskComponent  implements OnInit {
     id: new FormControl(''),
     title: new FormControl('', [Validators.required, Validators.minLength(4)]),
     description: new FormControl('', [Validators.required, Validators.minLength(4)]),
-    items: new FormControl([], [Validators.required, Validators.minLength(1)]),
+    items: new FormControl([]),
   })
 
   constructor(
