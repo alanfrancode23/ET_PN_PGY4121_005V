@@ -97,8 +97,8 @@ export class HomePage implements OnInit {
 
   confirmDeleteTask(task: Task){ {
     this.utilsSvc.presentAlert({
-      header: 'Eliminar comentario',
-      message: '¿Quieres eliminar este comentario?',
+      header: 'Eliminar Publicación',
+      message: '¿Quieres eliminar esta publicación?',
       mode: 'ios',
       buttons: [
         {
